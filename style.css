@@ -186,7 +186,7 @@ header.sticky .navbar a {
 
 
 
-.owl-carousel {
+/* .owl-carousel {
     width: 100%;
     height: 100vh;
 }
@@ -229,10 +229,10 @@ header.sticky .navbar a {
     transform: translateY(-50%);
     color: #fff;
     padding: 0 20%;
-}
+} */
 
-.slide-content h1 {
-    /* font-family: "Anton", serif; */
+/* .slide-content h1 {
+    font-family: "Anton", serif;
     font-size: 35px;
     text-transform: uppercase;
     padding-bottom: 20px;
@@ -252,7 +252,7 @@ header.sticky .navbar a {
 .owl-dots span {
     width: 20px !important;
     height: 20px !important;
-}
+} */
 
 /* .owl-dots button {
 	border: none !important;
@@ -264,7 +264,7 @@ header.sticky .navbar a {
 	outline: none !important;
 } */
 
-.owl-prev,
+/* .owl-prev,
 .owl-next {
     position: absolute;
     top: 50%;
@@ -285,9 +285,86 @@ header.sticky .navbar a {
 
 .sec {
     height: 100vh;
+} */
+
+.preloader {
+    width: 100%;
+    height: 100vh;
+    background: #fff url(images/preloader.gif) no-repeat center center;
+    /* background-repeat: no-repeat; */
+    object-fit: cover;
+    position: fixed;
+    z-index: 10000;
 }
 
 
+.autochange-img {
+    width: 100%;
+    height: 90vh;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)); */
+}
+
+.Section_top {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-image: url(images/bg-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    animation: change 10s infinite ease-in-out;
+}
+
+.Section_top .content {
+    position: absolute;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    padding: 200px 200px;
+    text-transform: uppercase;
+}
+
+.Section_top .content h3 {
+    color: #fff;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+.Section_top .content p {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 30px;
+
+}
+
+@keyframes change {
+    0% {
+        background-image: url(images/bg-1.jpg);
+    }
+
+    20% {
+        background-image: url(images/bg-2.jpg);
+    }
+
+    40% {
+        background-image: url(images/bg-3.jpg);
+    }
+
+    60% {
+        background-image: url(images/bg-1.jpg);
+    }
+
+    80% {
+        background-image: url(images/bg-2.jpg);
+    }
+
+    100% {
+        background-image: url(images/bg-3.jpg);
+    }
+}
 
 
 
@@ -828,9 +905,9 @@ footer {
     bottom: 0;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("images/bg-1.jpg");
     color: #fff;
-    padding: 100px 0 30px;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    padding: 80px 0 30px;
+    /* border-top-left-radius: 50px;
+    border-top-right-radius: 50px; */
     font-size: 13px;
     line-height: 20px;
 }
@@ -881,7 +958,27 @@ footer .footer-row .col .footer-logo {
     color: #fff;
 }
 
-.col form {
+.col .images .footer-logo-1 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.col .images .footer-logo-1 .img-1 {
+    /* gap: 10px; */
+    border: 1px solid white;
+    border-radius: 5px;
+
+}
+
+.col .images .footer-logo-1 .img-1 img {
+    width: 100px;
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* .col form {
     padding-bottom: 15px;
     display: flex;
     align-items: center;
@@ -913,6 +1010,10 @@ footer .footer-row .col .footer-logo {
 .col form button .fas {
     font-size: 16px;
     color: #ccc;
+} */
+
+.social-icons {
+    margin-top: 15px;
 }
 
 .col .social-icons .fa-brands {
@@ -1220,9 +1321,10 @@ footer .footer-row .col .footer-logo {
 .services-1 .cards .card {
     height: 350px;
     width: 370px;
-    background-color: #1c2335;
-    padding: 3% 8%;
-    border: 0.2px solid rgba(144, 226, 174, 0.2);
+    background-color: #ffffff;
+    padding: 2% 5%;
+    border: 1px solid rgba(6, 6, 6, 0.2);
+    box-shadow: 4px 3px 17px 1px rgb(36 39 37 / 30%);
     border-radius: 8px;
     transition: .6s;
     display: flex;
@@ -1232,7 +1334,11 @@ footer .footer-row .col .footer-logo {
     overflow: hidden;
 }
 
-.services-1 .cards .card:after {
+/* .services-1 .cards .card .top-details{
+    display: flex;
+} */
+
+/* .services-1 .cards .card:after {
     content: "";
     position: absolute;
     top: 150%;
@@ -1249,20 +1355,32 @@ footer .footer-row .col .footer-logo {
 .services-1 .cards .card:hover::after {
     width: 225%;
     top: -100%;
-}
+} */
 
 .services-1 .cards .card i {
-    color: var(--main);
-    margin-top: 30px;
+    color: #ffbb3b;
+    margin-top: 20px;
     font-size: 8.5rem;
 }
 
+.services-1 .cards .card a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #4d4d4d;
+}
+
+.services-1 .cards .card a i {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
 .services-1 .cards .card h2 {
-    color: #fff;
+    color: #000000;
     font-size: 25px;
     padding-top: 2rem;
     font-weight: 600;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 .services-1 .cards .card p {
@@ -1270,14 +1388,14 @@ footer .footer-row .col .footer-logo {
     font-size: 1.5rem;
     width: 100%;
     margin: 12px 0;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0.6);
 }
 
-.services-1 .cards .card:hover {
+/* .services-1 .cards .card:hover {
     background-color: #171717;
     transform: translateY(-8px);
     border-color: var(--main);
-}
+} */
 
 /* project count down section start */
 
@@ -1370,6 +1488,21 @@ span {
         font-size: 3rem;
     }
 
+    .Section_top .content {
+        padding: 150px 80px;
+    }
+
+    .Section_top .content h3 {
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+
+    .Section_top .content p {
+        font-size: 15px;
+        margin-top: 20px;
+
+    }
+
     .slide-content {
         padding: 0 16%;
     }
@@ -1442,6 +1575,21 @@ span {
         font-size: 1.5rem;
     }
 
+    .Section_top .content {
+        padding: 150px 30px;
+    }
+
+    .Section_top .content h3 {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    .Section_top .content p {
+        font-size: 10px;
+        margin-top: 10px;
+
+    }
+
     .about-video-img {
         min-height: 200px;
     }
@@ -1495,6 +1643,23 @@ span {
 
     .call-style {
         bottom: 60px;
+    }
+
+    .col .images .footer-logo-1 {
+        flex-direction: column;
+    }
+
+    .col .images .footer-logo-1 .img-1 {
+        border: none;
+    }
+
+    .col .images .footer-logo-1 .img-1 img {
+        width: 50%;
+        height: 100%;
+    }
+
+    .col .images .footer-logo-1 .img-1 {
+        text-align: center;
     }
 
 }

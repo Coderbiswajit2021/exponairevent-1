@@ -1,3 +1,12 @@
+// preloader 
+const fadeOut=()=>{
+    const loader = document.querySelector(".preloader");
+    loader.classList.remove("preloader");
+}
+window.addEventListener("load", fadeOut);
+
+
+
 window.addEventListener('scroll', function () {
     const header = document.querySelector('header');
     header.classList.toggle("sticky", window.scrollY > 0);
@@ -72,7 +81,7 @@ srt.reveal(`.box-1`)
 
 
 function downloadPDF() {
-    var pdfUrl = "E-Brochure/COMPANY PROFILE (1).pdf";
+    var pdfUrl = "E-Brochure/Exponair.pdf";
 
     var link = document.createElement('a');
     link.href = pdfUrl;
